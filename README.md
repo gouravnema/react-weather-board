@@ -10,7 +10,8 @@ This is entire UI centric project . It uses
 2. Redux : Handling data state 
 3. Jest : Test runner 
 4. Enzyme : Utility to test react components
-
+5. MDBootstrap(react) : Material design UI components framework
+6. PUG : HTML templating engine
 
 Requirements and Assumptions
 ----------------------------
@@ -32,4 +33,28 @@ for each unit.
 4. As a devops person I should be able to deploy my app using 
 automated scripts 
 
+Installation
+-----------------
+Pre-requisites 
+Yarn installed on the machine (npm shall work too)
 
+##### Building Project
+
+go to /src of the project and run to install dependencies
+```bash
+$ yarn install 
+
+```
+Building static files 
+```bash
+$ yarn build
+```
+Starting dev server
+```bash
+$ yarn start
+```
+
+Running tests 
+```bash
+$ yarn tests
+```
