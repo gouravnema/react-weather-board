@@ -45,7 +45,7 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [
-                    {loader: 'file-loader', options: {name: '../404.html'}},
+                    {loader: 'file-loader', options: {name: '../index.html'}},
                     {loader:'pug-html-loader', options:{data:{cacheBuster}}}
                 ]
             },
