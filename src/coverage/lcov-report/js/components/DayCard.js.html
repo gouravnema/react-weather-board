@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/components/DayCard.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">js/components</a> DayCard.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import TimeOfDay from "./TimeOfDay";
+import HourlyList from "./HourlyList";
+&nbsp;
+export default class DayCard extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {flipped: false}
+        this.toggleFlip = this.toggleFlip.bind(this)
+    }
+&nbsp;
+    renderMaxMinOfDay() {
+        let maxTemp = {time: null, value: -273}
+        let maxHumidity = {time: null, value: 0}
+        let minTemp = {time: null, value: 373}
+        let minHumidity = {time: null, value: 110}
+&nbsp;
+        for (let index in this.props.dayData) {
+            let data = this.props.dayData[index];
+            if (data.temp &gt; maxTemp.value) {
+                maxTemp.value = data.temp;
+                maxTemp.time = data.timestamp;
+            }
+            if (data.temp &lt; minTemp.value) {
+                minTemp.value = data.temp;
+                minTemp.time = data.timestamp;
+            }
+&nbsp;
+            if (data.humidity &gt; maxHumidity.value) {
+                maxHumidity.value = data.humidity;
+                maxHumidity.time = data.timestamp;
+            }
+            if (data.humidity &lt; minHumidity.value) {
+                minHumidity.value = data.humidity;
+                minHumidity.time = data.timestamp;
+            }
+        }
+        return &lt;React.Fragment&gt;
+            &lt;div&gt;Max Temp : {(maxTemp.value - 273.15).toFixed(2)} C at &lt;TimeOfDay timestamp={maxTemp.time}/&gt;&lt;/div&gt;
+            &lt;div&gt;Min Temp : {(minTemp.value - 273.15).toFixed(2)} C at &lt;TimeOfDay timestamp={minTemp.time}/&gt;&lt;/div&gt;
+            &lt;div&gt;Max Humidity : {maxHumidity.value}% at &lt;TimeOfDay timestamp={maxHumidity.time}/&gt;&lt;/div&gt;
+            &lt;div&gt;Min Humidity : {minHumidity.value}% at &lt;TimeOfDay timestamp={minHumidity.time}/&gt;&lt;/div&gt;
+        &lt;/React.Fragment&gt;
+    }
+&nbsp;
+&nbsp;
+    toggleFlip() {
+        this.setState({flipped: !this.state.flipped});
+    }
+&nbsp;
+    render() {
+        let classFlipped = this.state.flipped ? "flip-card-inner flipped" : "flip-card-inner";
+        return &lt;div className="flip-card" onClick={this.toggleFlip}&gt;
+            &lt;div className={classFlipped}&gt;
+                &lt;div className="flip-card-front"&gt;
+                    &lt;div&gt;
+                        &lt;h4&gt;Day : {(new Date(this.props.day * 86400 * 1000)).toDateString()}&lt;/h4&gt;
+                        {this.renderMaxMinOfDay()}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div className="flip-card-back"&gt;
+                    &lt;h4&gt;Hourly Forecast&lt;/h4&gt;
+                    &lt;div className="hourly-table"&gt;
+                        &lt;HourlyList data={this.props.dayData}/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 17 2019 08:41:10 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
