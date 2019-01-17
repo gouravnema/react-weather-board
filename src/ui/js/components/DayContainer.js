@@ -23,7 +23,7 @@ class DayContainer extends React.Component {
         }
         ;
         for (let dayKey in days) {
-            daysComponents.push(<DayCard day={parseInt(dayKey)} dayData={days[dayKey]}/>);
+            daysComponents.push(<DayCard className={'day-card'} day={parseInt(dayKey)} dayData={days[dayKey]}/>);
         }
         return daysComponents;
     }
@@ -37,7 +37,7 @@ class DayContainer extends React.Component {
                     <button onClick={(e) => APP.loadFromServer()}>Refresh</button>
                 </div>
             </div>
-            <div>
+            <div className="day-cards">
                 {this.renderDays()}
             </div>
         </React.Fragment>
