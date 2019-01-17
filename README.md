@@ -57,6 +57,8 @@ $ yarn tests
 ```
 
 #### Dev notes 
+* Configuration like api url and city id are hardcode as file 
+constants in `/src/ui/js/data/server.js` can be easily moved out to config later. 
 * Components are usually covered with html snapshots.
 * Components containing ui actions are covered with simulate.
 * Reducers are covered using TDD for all state changes.
