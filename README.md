@@ -51,6 +51,9 @@ Starting dev server
 ```bash
 $ yarn start
 ```
+Note : Dev server runs on port number 8082. Incase any other port need to be configured modify `    "start": " http-server -p8082  -a0.0.0.0 ../docs ",` in `/src/package.json`
+
+
 
 Running tests 
 ```bash

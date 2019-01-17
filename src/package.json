@@ -43,7 +43,7 @@
     "setupTestFrameworkScriptFile": "./js/tests/setup.js"
   },
   "scripts": {
-    "start": " http-server -p8082  -a0.0.0.0 ../build/ui ",
+    "start": " http-server -p8082  -a0.0.0.0 ../docs ",
     "build": "webpack",
     "build-watch": "webpack --watch",
     "test": "jest"
