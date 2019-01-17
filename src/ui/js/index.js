@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 //indexing other components for build using webpack entrypoint compilation.
-
+import '../img/flip.png';
 import '../index.pug';
 //css files
 import '../sass/style.scss';

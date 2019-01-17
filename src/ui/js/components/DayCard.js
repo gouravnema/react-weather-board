@@ -50,15 +50,17 @@ export default class DayCard extends React.Component {
 
     render() {
         let classFlipped = this.state.flipped ? "flip-card-inner flipped" : "flip-card-inner";
-        return <div className="flip-card" onClick={this.toggleFlip}>
+        return <div className="flip-card" >
             <div className={classFlipped}>
                 <div className="flip-card-front">
+                    <img className="flip-icon" src="./img/flip.png" onClick={this.toggleFlip}/>
                     <div>
                         <h4>Day : {(new Date(this.props.day * 86400 * 1000)).toDateString()}</h4>
                         {this.renderMaxMinOfDay()}
                     </div>
                 </div>
                 <div className="flip-card-back">
+                    <img className="flip-icon" src="./img/flip.png" onClick={this.toggleFlip}/>
                     <h4>Hourly Forecast</h4>
                     <div className="hourly-table">
                         <HourlyList data={this.props.dayData}/>

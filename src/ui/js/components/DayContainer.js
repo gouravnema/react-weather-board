@@ -23,7 +23,7 @@ class DayContainer extends React.Component {
         }
         ;
         for (let dayKey in days) {
-            daysComponents.push(<DayCard className={'day-card'} day={parseInt(dayKey)} dayData={days[dayKey]}/>);
+            daysComponents.push(<DayCard key={'card-'+dayKey} className={'day-card'} day={parseInt(dayKey)} dayData={days[dayKey]}/>);
         }
         return daysComponents;
     }

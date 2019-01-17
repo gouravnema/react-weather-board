@@ -3,8 +3,8 @@ import TimeOfDay from "./TimeOfDay";
 
 export default class HourlyList extends React.Component {
     render() {
-        let tableRows = this.props.data.map(day => {
-            return <tr>
+        let tableRows = this.props.data.map((day,index) => {
+            return <tr key={"row-"+index}>
                 <td><TimeOfDay timestamp={day.timestamp}/></td>
                 <td>{(day.temp - 273.15).toFixed(2)} C</td>
                 <td>{day.humidity}%</td>
