@@ -2,6 +2,7 @@
 
 Simple app to show weather cards for a city.
 
+Hosted on GithubPages @ http://showcase.gourav.info
 
 Tech stack
 ----------
@@ -57,6 +58,8 @@ $ yarn tests
 ```
 
 #### Dev notes 
+* webpack config is changed to output in `/docs` instead of `/build` 
+to support github pages based hosting.  
 * Configuration like api url and city id are hardcode as file 
 constants in `/src/ui/js/data/server.js` can be easily moved out to config later. 
 * Components are usually covered with html snapshots.
