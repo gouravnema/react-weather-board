@@ -18,14 +18,14 @@ var unlinkNonEmptyDirectory = function(path) {
     }
 };
 
-unlinkNonEmptyDirectory(__dirname+'/../build/ui');
+unlinkNonEmptyDirectory(__dirname+'/../docs');
 
 module.exports = {
     entry: './ui/js/index.js',
     mode:"development",
     output: {
         filename: 'script-'+cacheBuster+'.js',
-        path: path.resolve(__dirname, '../build/ui/js')
+        path: path.resolve(__dirname, '../docs/js')
     },
     module: {
         rules: [
