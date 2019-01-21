@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const cacheBuster = Date.now();
 
-var unlinkNonEmptyDirectory = function(path) {
+const unlinkNonEmptyDirectory = (path) => {
     if (fs.existsSync(path)) {
         fs.readdirSync(path).forEach(function(file, index){
             var thisPath = path + "/" + file;
@@ -22,7 +22,7 @@ unlinkNonEmptyDirectory(__dirname+'/../docs');
 
 module.exports = {
     entry: './ui/js/index.js',
-    mode:"development",
+    mode: "development",
     output: {
         filename: 'script-'+cacheBuster+'.js',
         path: path.resolve(__dirname, '../docs/js')
@@ -46,7 +46,7 @@ module.exports = {
                 test: /\.pug$/,
                 use: [
                     {loader: 'file-loader', options: {name: '../index.html'}},
-                    {loader:'pug-html-loader', options:{data:{cacheBuster}}}
+                    {loader: 'pug-html-loader', options: {data: {cacheBuster}}}
                 ]
             },
             {

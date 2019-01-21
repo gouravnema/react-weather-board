@@ -13,15 +13,15 @@ export default class HourlyList extends React.Component {
         });
         return <table>
             <thead>
-            <tr>
-                <th>Time</th>
-                <th>Temprature</th>
-                <th>Humidity</th>
-                <th>Weather</th>
-            </tr>
+                <tr>
+                    <th>Time</th>
+                    <th>Temprature</th>
+                    <th>Humidity</th>
+                    <th>Weather</th>
+                </tr>
             </thead>
             <tbody>
-            {tableRows}
+                {tableRows}
             </tbody>
         </table>
     }

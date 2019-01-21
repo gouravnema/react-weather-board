@@ -4,7 +4,7 @@ export default class DataReducer extends BaseReducer {
     constructor(){
         super();
         this.actions = {
-            ADD_WEATHER_DATA:this.addWeatherData
+            ADD_WEATHER_DATA: this.addWeatherData
         };
         this.defaultState = {observations: {}}
     }

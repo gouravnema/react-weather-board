@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 import DayCard from './DayCard';
+import {refreshAction} from '../actions/refresh';
 
 class DayContainer extends React.Component {
     constructor(props) {
@@ -21,9 +22,10 @@ class DayContainer extends React.Component {
             }
             days[day] = [observation];
         }
-        ;
+
         for (let dayKey in days) {
-            daysComponents.push(<DayCard key={'card-'+dayKey} className={'day-card'} day={parseInt(dayKey)} dayData={days[dayKey]}/>);
+            daysComponents.push(<DayCard key={'card-' + dayKey} className={'day-card'} day={parseInt(dayKey)}
+                dayData={days[dayKey]}/>);
         }
         return daysComponents;
     }
@@ -34,7 +36,7 @@ class DayContainer extends React.Component {
             <div>
                 Last updated on {(new Date(this.props.refreshedOn)).toLocaleString()}
                 <div>
-                    <button onClick={(e) => APP.loadFromServer()}>Refresh</button>
+                    <button onClick={this.props.refreshFromServer}>Refresh</button>
                 </div>
             </div>
             <div className="day-cards">
@@ -45,10 +47,14 @@ class DayContainer extends React.Component {
 }
 
 
-const mapStateToProps = function (state) {
-    return {observations: state.data.observations, refreshedOn: state.app.refreshedOn}
-}
+const mapStateToProps = state => ({observations: state.data.observations, refreshedOn: state.app.refreshedOn});
+
+const mapDispatchToProps = dispatch=> ({
+    refreshFromServer: (event)=>{
+        event.preventDefault()
+        dispatch(refreshAction())
+    }
+});
 
 
-
-export default connect(mapStateToProps, null)(DayContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(DayContainer);

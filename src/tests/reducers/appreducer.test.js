@@ -4,7 +4,7 @@ const APP_REDUCER = new AppReducer();
 
 test('update refresh on', () => {
 
-    let action = {type: "REFRESH_DATA",timestamp:1547641763297};
+    let action = {type: "REFRESH_DATA",timestamp: 1547641763297};
     let reducer = APP_REDUCER.getReducer();
     let newState = reducer(null, action);
 

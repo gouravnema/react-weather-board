@@ -8,6 +8,6 @@ configure({ adapter: new Adapter() });
 
 test('time of day should render proper time format', () => {
 
-       let wrapper =  shallow(<TimeOfDay timestamp={1547659361} />)
-      expect(wrapper.find('span').text()).toEqual('22:52')
+    let wrapper =  shallow(<TimeOfDay timestamp={1547659361} />)
+    expect(wrapper.find('span').text()).toEqual('22:52')
 });

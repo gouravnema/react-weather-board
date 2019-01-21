@@ -13,13 +13,13 @@ export default class BaseReducer {
     }
 
     getReducer() {
-        return (function (state = null, action) {
+        return (state = null, action) => {
             state = state || this.defaultState;
             let clonedState = this.clone(state);
             if (this.isApplicable(action.type)) {
                 return this.actions[action.type](clonedState, action);
             }
             return clonedState;
-        }).bind(this);
+        }
     }
 }
